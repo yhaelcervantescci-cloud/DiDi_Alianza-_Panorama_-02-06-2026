@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiDi Alianza Panorama · Industria Courier & Logística · México 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B1F3A;
+    --navy-mid: #163154;
+    --accent: #1D9E75;
+    --accent-light: #E1F5EE;
+    --accent-mid: #0F6E56;
+    --blue: #185FA5;
+    --blue-light: #E6F1FB;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --red: #A32D2D;
+    --red-light: #FCEBEB;
+    --gray: #5F5E5A;
+    --gray-light: #F1EFE8;
+    --border: #D3D1C7;
+    --text: #1A1A1A;
+    --muted: #5F5E5A;
+    --white: #FFFFFF;
+    --surface: #F9F8F6;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--white);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.55;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2C1A00 60%, #FF6A00 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(255,106,0,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6A00, #FFB347, #FF6A00);
+  }
+  .header-inner {
+    padding: 32px 48px 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .header-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFB347;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .header-title .didi-white { color: #FFFFFF; }
+  .header-title .didi-orange { color: #FF6A00; }
+  .header-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .header-objective {
+    margin: 0 0 20px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.07);
+    border-left: 3px solid #FF6A00;
+    border-radius: 0 8px 8px 0;
+  }
+  .header-objective-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFB347;
+    margin-bottom: 5px;
+  }
+  .header-objective p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pill {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,106,0,0.4);
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,106,0,0.1);
+  }
+  /* ── LANG BUTTON ── */
+  .lang-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .lang-btn:hover { background: rgba(255,106,0,0.3); border-color: #FF6A00; }
+
+  /* ── BODY ── */
+  .body { padding: 32px 48px 48px; }
+
+  /* ── SECTION HEADINGS ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin-bottom: 4px;
+    margin-top: 32px;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--accent);
+  }
+
+  /* ── KPI CARDS ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .kpi-card {
+    border-radius: 12px;
+    padding: 20px 18px 18px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .kpi-card.green  { background: #EAF7F2; border: 1px solid #A8DEC9; }
+  .kpi-card.red    { background: #FCEAEA; border: 1px solid #E8AAAA; }
+  .kpi-card.blue   { background: #E8F2FC; border: 1px solid #A9C8EE; }
+  .kpi-card.amber  { background: #FDF4E3; border: 1px solid #E8C97A; }
+  .kpi-icon {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .kpi-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+  .kpi-value.sm {
+    font-size: 20px;
+  }
+  .kpi-card.green  .kpi-value { color: var(--accent-mid); }
+  .kpi-card.red    .kpi-value { color: var(--red); }
+  .kpi-card.blue   .kpi-value { color: var(--blue); }
+  .kpi-card.amber  .kpi-value { color: var(--amber); }
+  .kpi-label {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  th {
+    background: var(--navy);
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: left;
+  }
+  th:first-child { border-radius: 6px 0 0 0; }
+  th:last-child { border-radius: 0 6px 0 0; }
+  td {
+    padding: 8px 12px;
+    border-bottom: 0.5px solid var(--border);
+    color: var(--text);
+    vertical-align: middle;
+  }
+  tr:nth-child(even) td { background: var(--surface); }
+  tr:last-child td { border-bottom: none; }
+  td.label { font-weight: 500; color: var(--navy); }
+
+  /* platform badges */
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .badge-didi  { background: #FF6A00; color: #fff; }
+  .badge-black { background: #1A1A1A; color: #fff; }
+  .badge-pink  { background: #D81B7A; color: #fff; }
+
+  /* ── ALERT BOXES ── */
+  .alert {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    border-left: 3px solid;
+  }
+  .alert-warn {
+    background: var(--amber-light);
+    border-color: var(--amber);
+    color: #5A3A06;
+  }
+  .alert-danger {
+    background: var(--red-light);
+    border-color: var(--red);
+    color: #4A1515;
+  }
+  .alert-success {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: #064230;
+  }
+  .alert-info {
+    background: var(--blue-light);
+    border-color: var(--blue);
+    color: #062842;
+  }
+  .alert strong { font-weight: 600; }
+
+  /* ── TWO-COL SUMMARY ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .summary-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .summary-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .summary-card ul { padding-left: 0; list-style: none; }
+  .summary-card li {
+    font-size: 12.5px;
+    color: var(--text);
+    padding: 7px 0 7px 20px;
+    border-bottom: 0.5px solid var(--border);
+    position: relative;
+    line-height: 1.5;
+  }
+  .summary-card li:last-child { border-bottom: none; }
+  .summary-card li::before { content: '→'; color: var(--accent); font-weight: 600; position: absolute; left: 0; top: 7px; }
+
+  /* ── LINKS ── */
+  a { color: var(--blue); text-decoration: none; border-bottom: 1px dashed var(--blue); }
+  a:hover { color: var(--accent-mid); border-bottom-color: var(--accent-mid); }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 0.5px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── DIVIDER ── */
+  .divider { height: 0.5px; background: var(--border); margin: 28px 0; }
+
+  /* ── NEWS TICKER ── */
+  .news-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #FFFBF0;
+    border: 1px solid #E8C84A;
+    border-left: 4px solid #E8C84A;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 8px 0 18px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .news-banner .news-tag {
+    flex-shrink: 0;
+    background: #E8C84A;
+    color: #5A3A00;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 1px;
+  }
+  .news-banner .news-text { color: #4A3800; }
+  .news-banner .news-text a {
+    color: #A06B00;
+    font-weight: 600;
+    border-bottom: 1px dashed #A06B00;
+  }
+  .news-banner .news-text a:hover { color: #704A00; }
+
+  @media print {
+    body { max-width: 100%; padding: 0; }
+    .body { padding: 20px 32px 32px; }
+    .header { padding: 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-top-row">
+      <div>
+        <div class="header-eyebrow">DiDi Alianza Panorama · Junio 2026</div>
+        <div class="header-title">
+          <span class="didi-white">DiDi Alianza </span><span class="didi-orange">Panorama</span>
+        </div>
+      </div>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">🌐 中文</button>
+    </div>
+    <div class="header-sub" data-es="Comparación desde el punto de vista del repartidor, del restaurante y del usuario frente a otras plataformas — DiDi Food · Plataforma Negra · Plataforma Rosa" data-zh="从骑手、餐厅和用户角度与其他平台的对比分析 — DiDi Food · 黑色平台 · 粉色平台">
+      Comparación desde el punto de vista del repartidor, del restaurante y del usuario frente a otras plataformas — DiDi Food · Plataforma Negra · Plataforma Rosa
+    </div>
+    <div class="header-objective">
+      <div class="header-objective-label" data-es="Objetivo del proyecto" data-zh="项目目标">Objetivo del proyecto</div>
+      <p data-es="Recopilar, analizar y centralizar información estratégica sobre la industria logística y courier en México. El proyecto busca entender las condiciones operativas, económicas y de experiencia de los tres actores clave del ecosistema de delivery: repartidores, restaurantes y usuarios finales, con el fin de identificar oportunidades competitivas y ventajas diferenciales para DiDi Food frente a otras plataformas del mercado." data-zh="收集、分析和整合墨西哥物流及快递行业的战略信息。本项目旨在了解外卖生态系统三大核心参与者——骑手、餐厅和终端用户——的运营、经济及体验状况，从而识别DiDi Food相对于市场其他平台的竞争机会和差异化优势。">
+        Recopilar, analizar y centralizar información estratégica sobre la industria logística y courier en México. El proyecto busca entender las condiciones operativas, económicas y de experiencia de los tres actores clave del ecosistema de delivery: repartidores, restaurantes y usuarios finales, con el fin de identificar oportunidades competitivas y ventajas diferenciales para DiDi Food frente a otras plataformas del mercado.
+      </p>
+    </div>
+    <div class="pill-row">
+      <span class="pill" data-es="Cobertura social" data-zh="社会保障">Cobertura social</span>
+      <span class="pill" data-es="Comisiones" data-zh="佣金">Comisiones</span>
+      <span class="pill" data-es="Márgenes restaurante" data-zh="餐厅利润">Márgenes restaurante</span>
+      <span class="pill" data-es="Comportamiento usuario" data-zh="用户行为">Comportamiento usuario</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const translations = {
+    es: {
+      eyebrow: 'DiDi Alianza Panorama · Junio 2026',
+      sub: 'Comparación desde el punto de vista del repartidor, del restaurante y del usuario frente a otras plataformas — DiDi Food · Plataforma Negra · Plataforma Rosa',
+      objLabel: 'Objetivo del proyecto',
+      objText: 'Recopilar, analizar y centralizar información estratégica sobre la industria logística y courier en México. El proyecto busca entender las condiciones operativas, económicas y de experiencia de los tres actores clave del ecosistema de delivery: repartidores, restaurantes y usuarios finales, con el fin de identificar oportunidades competitivas y ventajas diferenciales para DiDi Food frente a otras plataformas del mercado.',
+      pill1:'Cobertura social', pill2:'Comisiones', pill3:'Márgenes restaurante', pill4:'Comportamiento usuario',
+      kpiLabel: 'Cifras clave',
+      kpi1: 'Repartidores activos registrados en plataformas a ene. 2026',
+      kpi2: 'Con cobertura completa de seguridad social',
+      kpi3: 'MXN/mes ingreso promedio del repartidor en CDMX',
+      kpi4: 'Comisión que paga el restaurante por cada orden',
+      kpi5: 'MXN/mes gasto promedio del usuario en delivery',
+      s1label: 'Sección 1 — Prioridad Alta', s1title: 'Perspectiva del Repartidor',
+      th_aspecto: 'Aspecto',
+      r1:'Ganancia por orden', r2:'Ingreso mensual CDMX', r3:'Ingreso mensual Norte MX', r4:'Comisión plataforma', r5:'Bonos / zonas pico',
+      r5v1:'Agresivos ★', r5v2:'Pico y zona', r5v3:'Zonas + metas sem.',
+      alertWarn: '<strong>Costos propios (no cubiertos):</strong> Gasolina ~$200 MXN/día · Mantenimiento vehículo · Seguro (responsabilidad del repartidor) · Contabilidad ~$150 MXN/mes · Bolsa de entrega $650–$850 MXN según plataforma.',
+      best1title: '🏆 Mejor por criterio (Repartidor)',
+      best1li1: 'Mayor ganancia por orden → <strong>Plat. Negra</strong> ($35–$60 MXN)',
+      best1li2: 'Menor comisión → <strong>Plat. Rosa</strong> (~25–30%)',
+      best1li3: 'Bonos más agresivos → <strong>DiDi Food</strong>',
+      best1li4: 'Mayor ingreso Norte MX → <strong>DiDi / Plataforma Negra</strong> (empate)',
+      prest1title: '📋 Prestaciones por plataforma',
+      prest1li1: 'Cobertura por accidente laboral: desde la primera entrega',
+      prest1li2: 'Cobertura social completa: mín. ~$9,582 MXN/mes (2026)',
+      prest1li3: 'Aguinaldo y vacaciones: proporcionales incluidos en pago',
+      prest1li4: 'PTU: requiere 288 hrs/año + salario mínimo activo',
+      prest1li5: '16 plataformas registradas al sistema de seguridad social',
+      s2label: 'Sección 2 — Prioridad Media', s2title: 'Perspectiva del Restaurante',
+      th_factor: 'Factor financiero',
+      re1:'Comisión al restaurante', re2:'Ticket promedio CDMX', re3:'Fee estimado por orden',
+      re4:'Inflación al consumidor', re5:'Visibilidad pagada (ads)', re6:'Contrato exclusivo', re7:'Soporte contracargos',
+      re5v1:'Disponible', re5v2:'Disponible', re5v3:'Placement + Turbo',
+      re6v1:'No', re6v2:'Sí (Eats Exclusive)', re6v3:'No',
+      re7v1:'Básico', re7v2:'Robusto ★', re7v3:'Moderado',
+      alertDanger2: '<strong>⚠ Impacto real:</strong> Un restaurante con ticket de $250 MXN y 50 órdenes/día en Plataforma Negra (30% comisión) <strong>cede ~$112,500 MXN/mes</strong> solo a la plataforma, antes de considerar insumos, renta o nómina.',
+      th_criterio:'Criterio', th_plat:'Plataforma', th_nota:'Nota',
+      rc1:'Menor comisión', rc1n:'indie / dark kitchen',
+      rc2:'Mayor volumen', rc2n:'mayor base usuarios CDMX',
+      rc3:'Ticket premium', rc3n:'mayor poder adquisitivo',
+      best2title: '🏆 Mejor por perfil (Restaurante)',
+      clausulas: '⚠ Cláusulas a monitorear',
+      cl1:'Paridad de precios', cl1d:'Prohíben precio menor en sitio propio — bajo escrutinio legal',
+      cl2:'Empaque', cl2d:'Sellos antiviolación obligatorios desde jul. 2025 (~$3–$8/orden)',
+      cl3:'Contracargos', cl3d:'Cancelaciones y errores pueden imputarse al restaurante',
+      cl4:'Pass-through reforma', cl4d:'Alza de precios 10–20% desde jul. 2025',
+      alertSuccess2: '<strong>✔ Estrategia recomendada:</strong> Usar visibilidad de apps para adquirir clientes, luego migrar a canal directo (web propia, WhatsApp) para pedidos recurrentes y eliminar la comisión en la segunda compra en adelante.',
+      s3label: 'Sección 3 — Prioridad Complementaria', s3title: 'Perspectiva del Usuario / Consumidor',
+      th_factoru: 'Factor',
+      u1:'Costo de envío promedio', u2:'Tiempo de entrega CDMX', u3:'Ticket promedio usuario',
+      u4:'Membresía / suscripción', u5:'Frecuencia de uso', u6:'Perfil socioeconómico', u7:'Canal principal',
+      u4v1:'DiDi Pass ~$59/mes', u4v2:'Plat. One ~$99/mes', u4v3:'Prime ~$89/mes',
+      u7v1:'App móvil', u7v2:'App móvil / web', u7v3:'App móvil',
+      alertInfo3: '<strong>📊 Contexto de mercado:</strong> El delivery de alimentos en México alcanzó ~$85,000 MXN millones en 2025. El usuario promedio destina entre <strong>$600–$1,200 MXN/mes</strong> en pedidos por plataforma. La retención es sensible al precio del envío y a los tiempos de entrega.',
+      motiv: '👤 Motivaciones del usuario',
+      m1:'<strong>Conveniencia:</strong> 74% prioriza velocidad de entrega sobre precio',
+      m2:'<strong>Variedad:</strong> 61% cambia de plataforma según restaurante disponible',
+      m3:'<strong>Precio:</strong> costo de envío es el principal motivo de abandono de carrito',
+      m4:'<strong>Confianza:</strong> calificación del repartidor influye en 48% de recompras',
+      fricc: '📉 Fricciones y oportunidades',
+      f1:'Costo oculto', f1d:'Cargo por servicio +$8–$18 MXN causa abandono en 35% de órdenes',
+      f2:'Errores de pedido', f2d:'1 de cada 8 órdenes reporta artículo faltante o incorrecto',
+      f3:'Lealtad', f3d:'Solo 22% usa exclusivamente una plataforma — multihoming es la norma',
+      f4:'Oportunidad DiDi', f4d:'Envío más bajo + ecosistema (rides + food) como ventaja diferencial',
+      alertSuccess3: '<strong>✔ Palanca clave:</strong> El usuario de delivery en México es altamente sensible al precio del envío. Una estrategia de envío gratuito o subsidiado con membresía tiene el mayor potencial de captura y retención frente a competidores.',
+      conclLabel: 'Conclusión', conclTitle: 'Lo esencial para decidir',
+      conclText: 'Las tres plataformas ofrecen condiciones similares post-reforma. El diferencial lo determinan: <strong>ciudad o zona de operación</strong>, <strong>horas trabajadas</strong> y <strong>agresividad en bonos</strong> (repartidores); <strong>perfil del restaurante y ticket promedio</strong> (operadores); y <strong>precio de envío y velocidad de entrega</strong> (usuarios). DiDi Food mantiene ventaja competitiva en costo para repartidores y usuarios; Plataforma Rosa lidera en ticket alto y poder adquisitivo.',
+      footerSrc: '<strong>Fuentes:</strong>',
+      footerNote: 'Las cifras de ingresos, comisiones y costos se basan en reportes publicados por Infobae, Expansión, El Imparcial y fuentes oficiales IMSS/STPS (mayo 2026). Pueden variar por ciudad, zona, tipo de vehículo y horario. Este documento es un resumen ejecutivo — no sustituye asesoría legal o contable.',
+      platNegra: 'Plataforma Negra', platRosa: 'Plataforma Rosa',
+      news1tag: '📰 Mar. 2026 · Súper App & PIB',
+      news1text: 'DiDi presenta su <em>Reporte de Impacto Económico</em> (Kreab): su ecosistema genera <strong>$118,000 MDP en valor económico</strong> — equivalente al 0.47% del PIB de México. Impacto social adicional: $216,000 MDP. Con 30M de usuarios activos y más de 20 productos integrados, DiDi es la única súper app que opera movilidad, delivery y fintech de forma conjunta en el país. → <a href="https://heraldodemexico.com.mx/tendencias/2026/3/26/didi-el-aliado-digital-que-impulsa-mas-de-118-mil-millones-de-pesos-en-valor-economico-en-mexico-784474.html" target="_blank">El Heraldo, mar. 2026</a>',
+      news2tag: '📰 Jun. 2025–2026 · Retail & Conveniencia',
+      news2text: 'DiDi Shop se consolida en <strong>hiperconveniencia</strong> tras integrar "OXXO a Domicilio" en CDMX — conectando +21,000 tiendas OXXO con 16M de usuarios activos de DiDi. La alianza se expande a más ciudades en 2026, compitiendo directamente con Rappi Turbo (Coca-Cola, Modelo, Heineken) en última milla y conveniencia. → <a href="https://www.femsa.com/es/sala-de-prensa/comunicado/oxxo-y-didi-establecen-alianza-para-fortalecer-la-venta-a-domicilio-en-mexico/" target="_blank">FEMSA / DiDi Shop</a>',
+      news3tag: '📰 May. 2026 · Fintech & Competencia',
+      news3text: 'DiDi Fintech: <strong>+2M usuarios de DiDi Card</strong> (+50% en 2026), 2M en DiDi Cuenta y +40M de transacciones con DiDi Pay. Uber responde lanzando su propia tarjeta con Klar (may.–jun. 2026). La guerra fintech entre superapps se libra ahora dentro del ecosistema de delivery, con ambas plataformas usando crédito e instrumentos financieros para fidelizar restaurantes y usuarios. → <a href="https://www.xataka.com.mx/empresas-y-economia/uber-no-solo-quiere-tus-viajes-tambien-tu-dinero-mexico-estrena-su-primera-tarjeta-credito-klar" target="_blank">Xataka MX, may. 2026</a>',
+    },
+    zh: {
+      eyebrow: 'DiDi联盟全景 · 2026年6月',
+      sub: '从骑手、餐厅和用户角度与其他平台的对比分析 — DiDi Food · 黑色平台 · 粉色平台',
+      objLabel: '项目目标',
+      objText: '收集、分析和整合墨西哥物流及快递行业的战略信息。本项目旨在了解外卖生态系统三大核心参与者——骑手、餐厅和终端用户——的运营、经济及体验状况，从而识别DiDi Food相对于市场其他平台的竞争机会和差异化优势。',
+      pill1:'社会保障', pill2:'佣金', pill3:'餐厅利润率', pill4:'用户行为',
+      kpiLabel: '关键数据',
+      kpi1: '2026年1月在平台注册的活跃骑手',
+      kpi2: '享有完整社会保障覆盖',
+      kpi3: '墨西哥城骑手月均收入（比索）',
+      kpi4: '餐厅每单支付的平台佣金',
+      kpi5: '用户月均外卖消费（比索）',
+      s1label: '第一节 — 高优先级', s1title: '骑手视角',
+      th_aspecto: '维度',
+      r1:'每单收益', r2:'墨西哥城月收入', r3:'墨西哥北部月收入', r4:'平台佣金', r5:'奖励 / 高峰区域',
+      r5v1:'力度强劲 ★', r5v2:'高峰与区域', r5v3:'区域+周目标',
+      alertWarn: '<strong>自付成本（不含）：</strong>汽油约200比索/天 · 车辆维护 · 保险（骑手自负）· 记账约150比索/月 · 送餐包650–850比索（视平台而定）。',
+      best1title: '🏆 各维度最优（骑手）',
+      best1li1: '每单收益最高 → <strong>黑色平台</strong>（35–60比索）',
+      best1li2: '佣金最低 → <strong>粉色平台</strong>（约25–30%）',
+      best1li3: '奖励力度最强 → <strong>DiDi Food</strong>',
+      best1li4: '北部月收入最高 → <strong>DiDi / 黑色平台</strong>（并列）',
+      prest1title: '📋 各平台福利待遇',
+      prest1li1: '工伤保险：从首单起即生效',
+      prest1li2: '完整社保：最低约9,582比索/月（2026年）',
+      prest1li3: '年终奖与假期：按比例计入每次付款',
+      prest1li4: '利润分享：需每年工作288小时且达最低工资',
+      prest1li5: '已有16个平台接入社会保险系统',
+      s2label: '第二节 — 中等优先级', s2title: '餐厅视角',
+      th_factor: '财务因素',
+      re1:'餐厅佣金', re2:'墨西哥城平均客单价', re3:'预估每单费用',
+      re4:'消费者价格涨幅', re5:'付费曝光（广告）', re6:'独家合同', re7:'退款支持',
+      re5v1:'可用', re5v2:'可用', re5v3:'置顶 + Turbo',
+      re6v1:'否', re6v2:'是（独家合作）', re6v3:'否',
+      re7v1:'基础', re7v2:'完善 ★', re7v3:'一般',
+      alertDanger2: '<strong>⚠ 实际影响：</strong>一家客单价250比索、日均50单的餐厅在黑色平台（30%佣金）下，<strong>每月仅平台费用就达约112,500比索</strong>，尚不包括食材、租金或人工成本。',
+      th_criterio:'维度', th_plat:'平台', th_nota:'备注',
+      rc1:'佣金最低', rc1n:'独立/暗厨房',
+      rc2:'订单量最大', rc2n:'墨西哥城用户基础最大',
+      rc3:'高客单价', rc3n:'高消费能力用户',
+      best2title: '🏆 各类型最优（餐厅）',
+      clausulas: '⚠ 需关注的条款',
+      cl1:'价格平等条款', cl1d:'禁止在自有网站定价低于平台 — 正受法律审查',
+      cl2:'包装要求', cl2d:'2025年7月起强制使用防拆封贴（约3–8比索/单）',
+      cl3:'退款责任', cl3d:'取消订单及错误可能归咎于餐厅',
+      cl4:'改革成本转移', cl4d:'自2025年7月起价格上涨10–20%',
+      alertSuccess2: '<strong>✔ 推荐策略：</strong>利用平台曝光获取新客户，再通过自有渠道（官网、WhatsApp）承接复购订单，从第二单起消除佣金成本。',
+      s3label: '第三节 — 补充优先级', s3title: '用户 / 消费者视角',
+      th_factoru: '因素',
+      u1:'平均配送费', u2:'墨西哥城配送时间', u3:'用户平均客单价',
+      u4:'会员 / 订阅', u5:'使用频率', u6:'社会经济档次', u7:'主要渠道',
+      u4v1:'DiDi Pass 约59比索/月', u4v2:'黑平台会员 约99比索/月', u4v3:'粉平台会员 约89比索/月',
+      u7v1:'手机App', u7v2:'手机App / 网页', u7v3:'手机App',
+      alertInfo3: '<strong>📊 市场背景：</strong>2025年墨西哥外卖市场规模约达850亿比索。用户平均每月在单一平台消费<strong>600–1,200比索</strong>。用户留存对配送价格和配送时效高度敏感。',
+      motiv: '👤 用户动机',
+      m1:'<strong>便捷性：</strong>74%的用户优先考虑配送速度而非价格',
+      m2:'<strong>多样性：</strong>61%的用户会根据餐厅是否在线而切换平台',
+      m3:'<strong>价格：</strong>配送费是购物车放弃的首要原因',
+      m4:'<strong>信任度：</strong>骑手评分影响48%用户的复购决策',
+      fricc: '📉 痛点与机遇',
+      f1:'隐性费用', f1d:'服务费+8–18比索导致35%订单被放弃',
+      f2:'订单错误', f2d:'每8单中有1单报告物品缺失或错误',
+      f3:'用户忠诚度', f3d:'仅22%的用户只用一个平台 — 多平台使用是常态',
+      f4:'DiDi机遇', f4d:'更低配送费 + 生态系统（出行+外卖）构成差异化优势',
+      alertSuccess3: '<strong>✔ 关键杠杆：</strong>墨西哥外卖用户对配送价格高度敏感。免费或会员补贴配送策略，是对抗竞争对手、提升获客与留存率的最大机会。',
+      conclLabel: '结论', conclTitle: '决策要点',
+      conclText: '三大平台在改革后条件相近。差异化因素在于：骑手看<strong>运营城市/区域</strong>、<strong>工作时长</strong>和<strong>奖励力度</strong>；餐厅看<strong>类型定位和客单价</strong>；用户看<strong>配送价格和时效</strong>。DiDi Food在骑手和用户的成本端保持竞争优势；粉色平台在高客单价和消费能力方面领先。',
+      footerSrc: '<strong>数据来源：</strong>',
+      footerNote: '收入、佣金及成本数据来源于Infobae、Expansión、El Imparcial及IMSS/STPS官方资料（2026年5月）。数据因城市、区域、车辆类型和时段而异。本文件为执行摘要，不构成法律或财务建议。',
+      platNegra: '黑色平台', platRosa: '粉色平台',
+      news1tag: '📰 2026年5月 · DiDi金融科技',
+      news1text: 'DiDi的<strong>DiDi Card用户突破200万</strong>，2026年至今采用率增长50%。DiDi Cuenta已吸引200万用户，DiDi Pay累计完成超过<strong>4000万笔交易</strong>——正成为日常金融生态的核心，与Nubank和Mercado Pago展开竞争。→ <a href="https://www.cronista.com/mexico/finanzas-economia/didi-va-por-record-historico-en-mexico-de-la-mano-del-piojo-herrera-con-delivery-y-blindaje-fintech/" target="_blank">El Cronista, 2026年5月</a>',
+      news2tag: '📰 2026年6月 · 世界杯与需求',
+      news2text: '2026年世界杯开幕，DiDi预测外卖和出行需求将<strong>创历史峰值，涨幅超过50%</strong>。墨西哥城将承接全国25%的流量。DiDi向餐厅注入信贷以备战高峰期；体育场周边道路封闭背景下，DiDi Express和DiDi Moto成为核心战略产品。→ <a href="https://mexicobusiness.news/mobility/news/mexico-city-could-drive-25-didis-world-cup-traffic-mexico" target="_blank">Mexico Business News</a>',
+      news3tag: '📰 2026年2月–4月 · 改革与劳动检查',
+      news3text: '墨西哥劳动部首次将数字平台纳入<strong>2026年劳动检查计划</strong>（预计开展4.5–5万次检查），核查IMSS注册及劳动法合规情况。同时，UNIDAS网络研究显示，女性骑手需比改革前<strong>多挣147%</strong>，才能达到完整社保的收入门槛。→ <a href="https://www.xataka.com.mx/legislacion-y-derechos/primera-vez-gobierno-inspeccionara-a-uber-didi-apps-reparto-mexico-esto-que-revisara" target="_blank">Xataka MX, 2026年2月</a>',
+    }
+  };
+
+  let currentLang = 'es';
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    const s = (id) => document.getElementById(id);
+    const q = (sel) => document.querySelector(sel);
+    const qa = (sel) => document.querySelectorAll(sel);
+
+    // Header
+    q('.header-eyebrow').textContent = t.eyebrow;
+    q('.header-sub').textContent = t.sub;
+    q('.header-objective-label').textContent = t.objLabel;
+    q('.header-objective p').textContent = t.objText;
+    const pills = qa('.pill');
+    pills[0].textContent = t.pill1; pills[1].textContent = t.pill2;
+    pills[2].textContent = t.pill3; pills[3].textContent = t.pill4;
+
+    // KPI labels
+    q('.kpi-section-label').textContent = t.kpiLabel;
+    const kpiLabels = qa('.kpi-label');
+    kpiLabels[0].textContent = t.kpi1; kpiLabels[1].innerHTML = t.kpi2;
+    kpiLabels[2].textContent = t.kpi3; kpiLabels[3].innerHTML = t.kpi4;
+    kpiLabels[4].textContent = t.kpi5;
+
+    // Section 1
+    q('#s1-label').textContent = t.s1label;
+    q('#s1-title').textContent = t.s1title;
+    qa('#s1-table td.label')[0].textContent = t.r1;
+    qa('#s1-table td.label')[1].textContent = t.r2;
+    qa('#s1-table td.label')[2].textContent = t.r3;
+    qa('#s1-table td.label')[3].textContent = t.r4;
+    qa('#s1-table td.label')[4].textContent = t.r5;
+    qa('#s1-table th')[0].textContent = t.th_aspecto;
+    qa('#s1-table .r5v1')[0].innerHTML = t.r5v1;
+    qa('#s1-table .r5v2')[0].textContent = t.r5v2;
+    qa('#s1-table .r5v3')[0].textContent = t.r5v3;
+    q('#alert-warn').innerHTML = t.alertWarn;
+    q('#best1-title').textContent = t.best1title;
+    const b1li = qa('#best1-list li');
+    b1li[0].innerHTML = t.best1li1; b1li[1].innerHTML = t.best1li2;
+    b1li[2].innerHTML = t.best1li3; b1li[3].innerHTML = t.best1li4;
+    q('#prest1-title').textContent = t.prest1title;
+    const p1li = qa('#prest1-list li');
+    p1li[0].textContent = t.prest1li1; p1li[1].textContent = t.prest1li2;
+    p1li[2].textContent = t.prest1li3; p1li[3].textContent = t.prest1li4;
+    p1li[4].textContent = t.prest1li5;
+
+    // Section 2
+    q('#s2-label').textContent = t.s2label;
+    q('#s2-title').textContent = t.s2title;
+    qa('#s2-table th')[0].textContent = t.th_factor;
+    qa('#s2-table td.label')[0].textContent = t.re1;
+    qa('#s2-table td.label')[1].textContent = t.re2;
+    qa('#s2-table td.label')[2].textContent = t.re3;
+    qa('#s2-table td.label')[3].textContent = t.re4;
+    qa('#s2-table td.label')[4].textContent = t.re5;
+    qa('#s2-table td.label')[5].textContent = t.re6;
+    qa('#s2-table td.label')[6].textContent = t.re7;
+    qa('#s2-table .re5v1')[0].textContent = t.re5v1;
+    qa('#s2-table .re5v2')[0].textContent = t.re5v2;
+    qa('#s2-table .re5v3')[0].textContent = t.re5v3;
+    qa('#s2-table .re6v2')[0].textContent = t.re6v2;
+    qa('#s2-table .re7v2')[0].innerHTML = t.re7v2;
+    q('#alert-danger2').innerHTML = t.alertDanger2;
+    q('#best2-title').textContent = t.best2title;
+    qa('#best2-table th')[0].textContent = t.th_criterio;
+    qa('#best2-table th')[1].textContent = t.th_plat;
+    qa('#best2-table th')[2].textContent = t.th_nota;
+    qa('#best2-table .rc-label')[0].textContent = t.rc1; qa('#best2-table .rc-nota')[0].textContent = t.rc1n;
+    qa('#best2-table .rc-label')[1].textContent = t.rc2; qa('#best2-table .rc-nota')[1].textContent = t.rc2n;
+    qa('#best2-table .rc-label')[2].textContent = t.rc3; qa('#best2-table .rc-nota')[2].textContent = t.rc3n;
+    q('#clausulas-title').textContent = t.clausulas;
+    qa('.cl-label')[0].textContent = t.cl1; qa('.cl-desc')[0].innerHTML = t.cl1d;
+    qa('.cl-label')[1].textContent = t.cl2; qa('.cl-desc')[1].textContent = t.cl2d;
+    qa('.cl-label')[2].textContent = t.cl3; qa('.cl-desc')[2].textContent = t.cl3d;
+    qa('.cl-label')[3].textContent = t.cl4; qa('.cl-desc')[3].textContent = t.cl4d;
+    q('#alert-success2').innerHTML = t.alertSuccess2;
+
+    // Section 3
+    q('#s3-label').textContent = t.s3label;
+    q('#s3-title').textContent = t.s3title;
+    qa('#s3-table th')[0].textContent = t.th_factoru;
+    qa('#s3-table td.label')[0].textContent = t.u1;
+    qa('#s3-table td.label')[1].textContent = t.u2;
+    qa('#s3-table td.label')[2].textContent = t.u3;
+    qa('#s3-table td.label')[3].textContent = t.u4;
+    qa('#s3-table td.label')[4].textContent = t.u5;
+    qa('#s3-table td.label')[5].textContent = t.u6;
+    qa('#s3-table td.label')[6].textContent = t.u7;
+    qa('#s3-table .u4v1')[0].textContent = t.u4v1;
+    qa('#s3-table .u4v2')[0].textContent = t.u4v2;
+    qa('#s3-table .u4v3')[0].textContent = t.u4v3;
+    qa('#s3-table .u7v1')[0].textContent = t.u7v1;
+    qa('#s3-table .u7v2')[0].textContent = t.u7v2;
+    qa('#s3-table .u7v3')[0].textContent = t.u7v3;
+    q('#alert-info3').innerHTML = t.alertInfo3;
+    q('#motiv-title').textContent = t.motiv;
+    const mli = qa('#motiv-list li');
+    mli[0].innerHTML = t.m1; mli[1].innerHTML = t.m2;
+    mli[2].innerHTML = t.m3; mli[3].innerHTML = t.m4;
+    q('#fricc-title').textContent = t.fricc;
+    qa('.f-label')[0].textContent = t.f1; qa('.f-desc')[0].textContent = t.f1d;
+    qa('.f-label')[1].textContent = t.f2; qa('.f-desc')[1].textContent = t.f2d;
+    qa('.f-label')[2].textContent = t.f3; qa('.f-desc')[2].textContent = t.f3d;
+    qa('.f-label')[3].textContent = t.f4; qa('.f-desc')[3].textContent = t.f4d;
+    q('#alert-success3').innerHTML = t.alertSuccess3;
+
+    // Conclusion
+    q('#concl-label').textContent = t.conclLabel;
+    q('#concl-title').textContent = t.conclTitle;
+    q('#concl-text').innerHTML = t.conclText;
+
+    // Footer
+    q('#footer-src').innerHTML = t.footerSrc;
+    q('#footer-note').textContent = t.footerNote;
+
+    // News banners
+    q('#news1-tag').textContent = t.news1tag;
+    q('#news1-text').innerHTML = t.news1text;
+    q('#news2-tag').textContent = t.news2tag;
+    q('#news2-text').innerHTML = t.news2text;
+    q('#news3-tag').textContent = t.news3tag;
+    q('#news3-text').innerHTML = t.news3text;
+
+    // Badge text for Plataforma Negra / Rosa
+    qa('.badge-black').forEach(el => el.textContent = t.platNegra);
+    qa('.badge-pink').forEach(el => el.textContent = t.platRosa);
+  }
+
+  function toggleLang() {
+    currentLang = currentLang === 'es' ? 'zh' : 'es';
+    document.getElementById('langBtn').textContent = currentLang === 'es' ? '🌐 中文' : '🌐 ES';
+    document.documentElement.lang = currentLang === 'es' ? 'es' : 'zh';
+    applyLang(currentLang);
+  }
+</script>
+
+<div class="body">
+
+  <!-- NEWS BANNERS — encima de KPIs -->
+  <div style="display:flex;flex-direction:column;gap:8px;margin:20px 0 18px;">
+    <div class="news-banner">
+      <span class="news-tag" id="news1-tag">📰 Mar. 2026 · Súper App &amp; PIB</span>
+      <span class="news-text" id="news1-text">
+        DiDi presenta su <em>Reporte de Impacto Económico</em> (Kreab): su ecosistema genera <strong>$118,000 MDP en valor económico</strong> — equivalente al 0.47% del PIB de México. Impacto social adicional: $216,000 MDP. Con 30M de usuarios activos y más de 20 productos integrados, es la única súper app con movilidad, delivery y fintech operando de forma conjunta en el país. →
+        <a href="https://heraldodemexico.com.mx/tendencias/2026/3/26/didi-el-aliado-digital-que-impulsa-mas-de-118-mil-millones-de-pesos-en-valor-economico-en-mexico-784474.html" target="_blank">El Heraldo, mar. 2026</a>
+      </span>
+    </div>
+    <div class="news-banner">
+      <span class="news-tag" id="news2-tag">📰 Jun. 2025–2026 · Retail &amp; Conveniencia</span>
+      <span class="news-text" id="news2-text">
+        DiDi Shop se consolida en <strong>hiperconveniencia</strong> tras integrar "OXXO a Domicilio" en CDMX — conectando +21,000 tiendas OXXO con 16M de usuarios activos de DiDi. La alianza se expande a más ciudades en 2026, compitiendo directamente con Rappi Turbo (Coca-Cola, Modelo, Heineken) en última milla y conveniencia. →
+        <a href="https://www.femsa.com/es/sala-de-prensa/comunicado/oxxo-y-didi-establecen-alianza-para-fortalecer-la-venta-a-domicilio-en-mexico/" target="_blank">FEMSA / DiDi Shop</a>
+      </span>
+    </div>
+    <div class="news-banner">
+      <span class="news-tag" id="news3-tag">📰 May. 2026 · Fintech &amp; Competencia</span>
+      <span class="news-text" id="news3-text">
+        DiDi Fintech: <strong>+2M usuarios de DiDi Card</strong> (+50% en 2026), 2M en DiDi Cuenta y +40M transacciones con DiDi Pay. Uber responde lanzando su propia tarjeta con Klar (may.–jun. 2026). La guerra fintech entre superapps se libra ahora dentro del ecosistema de delivery, con crédito e instrumentos financieros como palanca de fidelización de restaurantes y usuarios. →
+        <a href="https://www.xataka.com.mx/empresas-y-economia/uber-no-solo-quiere-tus-viajes-tambien-tu-dinero-mexico-estrena-su-primera-tarjeta-credito-klar" target="_blank">Xataka MX, may. 2026</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="section-label kpi-section-label" style="margin-top:24px;">Cifras clave</div>
+  <div class="kpi-grid" style="grid-template-columns: repeat(5, 1fr);">
+    <div class="kpi-card green">
+      <div class="kpi-icon">🛵</div>
+      <div class="kpi-value">1.35M</div>
+      <div class="kpi-label">Repartidores activos registrados en plataformas a ene. 2026</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-icon">🛡️</div>
+      <div class="kpi-value">10.3%</div>
+      <div class="kpi-label">Con cobertura completa de seguridad social</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-value sm">$3K–$8K</div>
+      <div class="kpi-label">MXN/mes ingreso promedio del repartidor en CDMX</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-icon">🏪</div>
+      <div class="kpi-value">20–35%</div>
+      <div class="kpi-label">Comisión que paga el restaurante por cada orden</div>
+    </div>
+    <div class="kpi-card" style="background:#F3EEFF;border:1px solid #C9AAEE;">
+      <div class="kpi-icon">📱</div>
+      <div class="kpi-value" style="color:#6B21A8; font-size:20px;">$600–$1.2K</div>
+      <div class="kpi-label">MXN/mes gasto promedio del usuario en delivery</div>
+    </div>
+  </div>
+
+  <!-- SECCION 1: REPARTIDORES -->
+  <div class="section-label" id="s1-label">Sección 1 — Prioridad Alta</div>
+  <div class="section-title" id="s1-title">Perspectiva del Repartidor</div>
+
+  <table id="s1-table">
+    <thead>
+      <tr>
+        <th style="width:30%">Aspecto</th>
+        <th><span class="badge badge-didi">DiDi Food</span></th>
+        <th><span class="badge badge-black">Plataforma Negra</span></th>
+        <th><span class="badge badge-pink">Plataforma Rosa</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Ganancia por orden</td>
+        <td>$35–$55 MXN</td>
+        <td><strong>$35–$60 MXN ★</strong></td>
+        <td>$30–$50 MXN</td>
+      </tr>
+      <tr>
+        <td class="label">Ingreso mensual CDMX</td>
+        <td>$3,000–$8,000</td>
+        <td>$3,000–$8,000</td>
+        <td>$3,000–$7,500</td>
+      </tr>
+      <tr>
+        <td class="label">Ingreso mensual Norte MX</td>
+        <td>$8,760–$11,700</td>
+        <td>$8,760–$11,700</td>
+        <td>$8,000–$10,000</td>
+      </tr>
+      <tr>
+        <td class="label">Comisión plataforma</td>
+        <td>~30%</td>
+        <td>~28–30%</td>
+        <td><strong>~25–30% ★</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Bonos / zonas pico</td>
+        <td><strong class="r5v1">Agresivos ★</strong></td>
+        <td class="r5v2">Pico y zona</td>
+        <td class="r5v3">Zonas + metas sem.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert alert-warn" id="alert-warn">
+    <strong>Costos propios (no cubiertos):</strong> Gasolina ~$200 MXN/día · Mantenimiento vehículo · Seguro (responsabilidad del repartidor) · Contabilidad ~$150 MXN/mes · Bolsa de entrega $650–$850 MXN según plataforma.
+  </div>
+
+  <div class="two-col">
+    <div class="summary-card">
+      <h4 id="best1-title">🏆 Mejor por criterio (Repartidor)</h4>
+      <ul id="best1-list">
+        <li>Mayor ganancia por orden → <strong>Plat. Negra</strong> ($35–$60 MXN)</li>
+        <li>Menor comisión → <strong>Plat. Rosa</strong> (~25–30%)</li>
+        <li>Bonos más agresivos → <strong>DiDi Food</strong></li>
+        <li>Mayor ingreso Norte MX → <strong>DiDi / Plataforma Negra</strong> (empate)</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <h4 id="prest1-title">📋 Prestaciones por plataforma</h4>
+      <ul id="prest1-list">
+        <li>Cobertura por accidente laboral: desde la primera entrega</li>
+        <li>Cobertura social completa: mín. ~$9,582 MXN/mes (2026)</li>
+        <li>Aguinaldo y vacaciones: proporcionales incluidos en pago</li>
+        <li>PTU: requiere 288 hrs/año + salario mínimo activo</li>
+        <li>16 plataformas registradas al sistema de seguridad social</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECCION 2: RESTAURANTES -->
+  <div class="section-label" id="s2-label">Sección 2 — Prioridad Media</div>
+  <div class="section-title" id="s2-title">Perspectiva del Restaurante</div>
+
+  <table id="s2-table">
+    <thead>
+      <tr>
+        <th style="width:30%">Factor financiero</th>
+        <th><span class="badge badge-didi">DiDi Food</span></th>
+        <th><span class="badge badge-black">Plataforma Negra</span></th>
+        <th><span class="badge badge-pink">Plataforma Rosa</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Comisión al restaurante</td>
+        <td><strong>20–25% ★</strong></td>
+        <td>25–30%</td>
+        <td>25–35%</td>
+      </tr>
+      <tr>
+        <td class="label">Ticket promedio CDMX</td>
+        <td>$200–$280 MXN</td>
+        <td>$220–$300 MXN</td>
+        <td>$200–$280 MXN</td>
+      </tr>
+      <tr>
+        <td class="label">Fee estimado por orden</td>
+        <td>$40–$70 MXN</td>
+        <td>$55–$90 MXN</td>
+        <td>$50–$98 MXN</td>
+      </tr>
+      <tr>
+        <td class="label">Inflación al consumidor</td>
+        <td>~10–15%</td>
+        <td>~12–18%</td>
+        <td><strong>~12–20%</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Visibilidad pagada (ads)</td>
+        <td class="re5v1">Disponible</td>
+        <td class="re5v2">Disponible</td>
+        <td class="re5v3">Placement + Turbo</td>
+      </tr>
+      <tr>
+        <td class="label">Contrato exclusivo</td>
+        <td>No</td>
+        <td class="re6v2">Sí (Eats Exclusive)</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td class="label">Soporte contracargos</td>
+        <td>Básico</td>
+        <td><strong class="re7v2">Robusto ★</strong></td>
+        <td>Moderado</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert alert-danger" id="alert-danger2">
+    <strong>⚠ Impacto real:</strong> Un restaurante con ticket de $250 MXN y 50 órdenes/día en Plataforma Negra (30% comisión) <strong>cede ~$112,500 MXN/mes</strong> solo a la plataforma, antes de considerar insumos, renta o nómina.
+  </div>
+
+  <div class="two-col">
+    <div class="summary-card">
+      <h4 id="best2-title">🏆 Mejor por perfil (Restaurante)</h4>
+      <table id="best2-table" style="width:100%;border-collapse:collapse;margin:0;">
+        <thead>
+          <tr>
+            <th style="background:transparent;color:var(--muted);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:4px 8px 6px 0;border-bottom:1px solid var(--border);font-weight:600;text-align:left;">Criterio</th>
+            <th style="background:transparent;color:var(--muted);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:4px 8px 6px;border-bottom:1px solid var(--border);font-weight:600;text-align:left;">Plataforma</th>
+            <th style="background:transparent;color:var(--muted);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:4px 0 6px;border-bottom:1px solid var(--border);font-weight:600;text-align:left;">Nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rc-label" style="padding:7px 8px 7px 0;font-size:12px;color:var(--muted);border-bottom:0.5px solid var(--border);white-space:nowrap;">Menor comisión</td>
+            <td style="padding:7px 8px;border-bottom:0.5px solid var(--border);"><span class="badge badge-didi">DiDi Food</span></td>
+            <td class="rc-nota" style="padding:7px 0;font-size:11.5px;color:var(--muted);border-bottom:0.5px solid var(--border);">indie / dark kitchen</td>
+          </tr>
+          <tr>
+            <td class="rc-label" style="padding:7px 8px 7px 0;font-size:12px;color:var(--muted);border-bottom:0.5px solid var(--border);white-space:nowrap;">Mayor volumen</td>
+            <td style="padding:7px 8px;border-bottom:0.5px solid var(--border);"><span class="badge badge-black">Plataforma Negra</span></td>
+            <td class="rc-nota" style="padding:7px 0;font-size:11.5px;color:var(--muted);border-bottom:0.5px solid var(--border);">mayor base usuarios CDMX</td>
+          </tr>
+          <tr>
+            <td class="rc-label" style="padding:7px 8px 7px 0;font-size:12px;color:var(--muted);white-space:nowrap;">Ticket premium</td>
+            <td style="padding:7px 8px;"><span class="badge badge-pink">Plataforma Rosa</span></td>
+            <td class="rc-nota" style="padding:7px 0;font-size:11.5px;color:var(--muted);">mayor poder adquisitivo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="summary-card">
+      <h4 id="clausulas-title">⚠ Cláusulas a monitorear</h4>
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="cl-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Paridad de precios</span>
+          <span class="cl-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Prohíben precio menor en sitio propio — bajo escrutinio legal</span>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="cl-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Empaque</span>
+          <span class="cl-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Sellos antiviolación obligatorios desde jul. 2025 (~$3–$8/orden)</span>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="cl-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Contracargos</span>
+          <span class="cl-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Cancelaciones y errores pueden imputarse al restaurante</span>
+        </div>
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:6px 10px;align-items:start;padding:8px 0;">
+          <span class="cl-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Pass-through reforma</span>
+          <span class="cl-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Alza de precios 10–20% desde jul. 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-success" id="alert-success2">
+    <strong>✔ Estrategia recomendada:</strong> Usar visibilidad de apps para adquirir clientes, luego migrar a canal directo (web propia, WhatsApp) para pedidos recurrentes y eliminar la comisión en la segunda compra en adelante.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECCION 3: USUARIO / CONSUMIDOR -->
+  <div class="section-label" id="s3-label">Sección 3 — Prioridad Complementaria</div>
+  <div class="section-title" id="s3-title">Perspectiva del Usuario / Consumidor</div>
+
+  <table id="s3-table">
+    <thead>
+      <tr>
+        <th style="width:30%">Factor</th>
+        <th><span class="badge badge-didi">DiDi Food</span></th>
+        <th><span class="badge badge-black">Plataforma Negra</span></th>
+        <th><span class="badge badge-pink">Plataforma Rosa</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Costo de envío promedio</td>
+        <td><strong>$15–$29 MXN ★</strong></td>
+        <td>$25–$49 MXN</td>
+        <td>$20–$45 MXN</td>
+      </tr>
+      <tr>
+        <td class="label">Tiempo de entrega CDMX</td>
+        <td>25–40 min</td>
+        <td><strong>20–35 min ★</strong></td>
+        <td>25–45 min</td>
+      </tr>
+      <tr>
+        <td class="label">Ticket promedio usuario</td>
+        <td>$180–$260 MXN</td>
+        <td>$220–$300 MXN</td>
+        <td><strong>$240–$350 MXN ★</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Membresía / suscripción</td>
+        <td class="u4v1">DiDi Pass ~$59/mes</td>
+        <td class="u4v2">Plat. One ~$99/mes</td>
+        <td class="u4v3">Prime ~$89/mes</td>
+      </tr>
+      <tr>
+        <td class="label">Frecuencia de uso</td>
+        <td>2–3x / semana</td>
+        <td><strong>3–4x / semana ★</strong></td>
+        <td>2–3x / semana</td>
+      </tr>
+      <tr>
+        <td class="label">Perfil socioeconómico</td>
+        <td>C, C–, D+</td>
+        <td>B, C+</td>
+        <td><strong>A, B, C+ ★</strong></td>
+      </tr>
+      <tr>
+        <td class="label">Canal principal</td>
+        <td class="u7v1">App móvil</td>
+        <td class="u7v2">App móvil / web</td>
+        <td class="u7v3">App móvil</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert alert-info" id="alert-info3">
+    <strong>📊 Contexto de mercado:</strong> El delivery de alimentos en México alcanzó ~$85,000 MXN millones en 2025. El usuario promedio destina entre <strong>$600–$1,200 MXN/mes</strong> en pedidos por plataforma. La retención es sensible al precio del envío y a los tiempos de entrega.
+  </div>
+
+  <div class="two-col">
+    <div class="summary-card">
+      <h4 id="motiv-title">👤 Motivaciones del usuario</h4>
+      <ul id="motiv-list">
+        <li><strong>Conveniencia:</strong> 74% prioriza velocidad de entrega sobre precio</li>
+        <li><strong>Variedad:</strong> 61% cambia de plataforma según restaurante disponible</li>
+        <li><strong>Precio:</strong> costo de envío es el principal motivo de abandono de carrito</li>
+        <li><strong>Confianza:</strong> calificación del repartidor influye en 48% de recompras</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <h4 id="fricc-title">📉 Fricciones y oportunidades</h4>
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="f-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Costo oculto</span>
+          <span class="f-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Cargo por servicio +$8–$18 MXN causa abandono en 35% de órdenes</span>
+        </div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="f-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Errores de pedido</span>
+          <span class="f-desc" style="font-size:12px;color:var(--text);line-height:1.45;">1 de cada 8 órdenes reporta artículo faltante o incorrecto</span>
+        </div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-bottom:0.5px solid var(--border);">
+          <span class="f-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Lealtad</span>
+          <span class="f-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Solo 22% usa exclusivamente una plataforma — multihoming es la norma</span>
+        </div>
+        <div style="display:grid;grid-template-columns:110px 1fr;gap:6px 10px;align-items:start;padding:8px 0;">
+          <span class="f-label" style="font-size:11px;font-weight:700;color:var(--navy);line-height:1.4;">Oportunidad DiDi</span>
+          <span class="f-desc" style="font-size:12px;color:var(--text);line-height:1.45;">Envío más bajo + ecosistema (rides + food) como ventaja diferencial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-success" id="alert-success3">
+    <strong>✔ Palanca clave:</strong> El usuario de delivery en México es altamente sensible al precio del envío. Una estrategia de envío gratuito o subsidiado con membresía tiene el mayor potencial de captura y retención frente a competidores.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CONCLUSION -->
+  <div class="section-label" id="concl-label">Conclusión</div>
+  <div class="section-title" id="concl-title">Lo esencial para decidir</div>
+
+  <div class="alert alert-info" id="concl-text">
+    Las tres plataformas ofrecen condiciones similares post-reforma. El diferencial lo determinan: <strong>ciudad o zona de operación</strong>, <strong>horas trabajadas</strong> y <strong>agresividad en bonos</strong> (repartidores); <strong>perfil del restaurante y ticket promedio</strong> (operadores); y <strong>precio de envío y velocidad de entrega</strong> (usuarios). DiDi Food mantiene ventaja competitiva en costo para repartidores y usuarios; Plataforma Rosa lidera en ticket alto y poder adquisitivo.
+  </div>
+
+  <div class="footer">
+    <span id="footer-src"><strong>Fuentes:</strong></span>
+    <a href="https://imss.gob.mx/prensa/archivo/202602/075" target="_blank">IMSS ene. 2026</a> ·
+    <a href="https://expansion.mx/finanzas-personales/2026/04/22/repartidor-o-taxi-uber-rappi-didi-recibo-utilidades-2026" target="_blank">Expansión abr. 2026</a> ·
+    <a href="https://www.cronista.com/mexico/finanzas-economia/didi-va-por-record-historico-en-mexico-de-la-mano-del-piojo-herrera-con-delivery-y-blindaje-fintech/" target="_blank">El Cronista may. 2026</a> ·
+    <a href="https://www.xataka.com.mx/legislacion-y-derechos/primera-vez-gobierno-inspeccionara-a-uber-didi-apps-reparto-mexico-esto-que-revisara" target="_blank">Xataka MX feb. 2026</a> ·
+    <a href="https://gob.mx/stps/documentos/" target="_blank">STPS FAQ</a> ·
+    <a href="https://verificado.com.mx/reforma-trabajadores-plataformas-digitales/" target="_blank">Verificado.mx jul. 2025</a>
+    <br><br>
+    <span id="footer-note">Las cifras de ingresos, comisiones y costos se basan en reportes publicados por El Cronista, Expansión, Xataka MX, Bloomberg Línea y fuentes oficiales IMSS/STPS (junio 2026). Pueden variar por ciudad, zona, tipo de vehículo y horario. Este documento es un resumen ejecutivo — no sustituye asesoría legal o contable.</span>
+  </div>
+
+</div>
+</body>
+</html>
